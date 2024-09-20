@@ -3,7 +3,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-//Test Comment 25
 /**
  * Created by LaunchCode
  */
@@ -121,6 +120,20 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+        //ORIGINAL
+        //System.out.println("printJobs is not implemented yet");
+
+        //UPDATED
+        for (HashMap<String, String> item : someJobs) {
+                System.out.println("*****");
+                System.out.println("position type: " + item.get("position type"));
+                System.out.println("name: " + item.get("name"));
+                System.out.println("employer: " + item.get("employer"));
+                System.out.println("location: " + item.get("location"));
+                System.out.println("core competency: " + item.get("core competency"));
+                System.out.println("*****");
+                System.out.println();
+            }
+        };
+
     }
-}
