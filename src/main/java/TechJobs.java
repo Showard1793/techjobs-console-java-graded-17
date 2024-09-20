@@ -6,6 +6,9 @@ import java.util.Scanner;
 /**
  * Created by LaunchCode
  */
+
+//TODO: Only parses "St. Louis" when parsed by location. Need to add other cities.
+
 public class TechJobs {
 
     static Scanner in = new Scanner(System.in);
@@ -124,13 +127,13 @@ public class TechJobs {
         //System.out.println("printJobs is not implemented yet");
 
         //UPDATED
-        for (HashMap<String, String> item : someJobs) {
+        for (HashMap<String, String> job : someJobs) {
                 System.out.println("*****");
-                System.out.println("position type: " + item.get("position type"));
-                System.out.println("name: " + item.get("name"));
-                System.out.println("employer: " + item.get("employer"));
-                System.out.println("location: " + item.get("location"));
-                System.out.println("core competency: " + item.get("core competency"));
+                System.out.println("position type: " + job.get("position type"));
+                System.out.println("name: " + job.get("name"));
+                System.out.println("employer: " + job.get("employer"));
+                System.out.println("location: " + job.get("location"));
+                System.out.println("core competency: " + job.get("core competency"));
                 System.out.println("*****");
                 System.out.println();
             }
