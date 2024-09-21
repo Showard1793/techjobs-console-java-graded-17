@@ -75,7 +75,7 @@ public class JobData {
 
             String aValue = row.get(column);
 
-            if (aValue.contains(value)) {
+            if (aValue.toUpperCase().contains(value.toUpperCase())) {
                 jobs.add(row);
             }
         }
@@ -94,8 +94,26 @@ public class JobData {
         // load data, if not already loaded
         loadData();
 
-        // TODO - implement this method
-        return null;
+        // TODO - implement this method - DONE!
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+
+        for (HashMap<String, String> row : allJobs) {
+
+            // loop through each field in the job
+            for (String key : row.keySet()) {
+                String fieldValue = row.get(key);
+
+                // Does the field contain the search value?
+                if (fieldValue != null && fieldValue.toUpperCase().contains(value.toUpperCase())) {
+                    if (!jobs.contains(row)) {
+                        jobs.add(row);
+                    }
+                    break; // Stop checking other fields since we found a match
+                }
+            }
+        }
+
+        return jobs;
     }
 
     /**
