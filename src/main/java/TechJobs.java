@@ -124,16 +124,16 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
         if (someJobs.isEmpty()) {
-            System.out.println("No Results");
-        }
-
-        for (HashMap<String, String> job : someJobs) {
-            System.out.println("*****");
-            for (Map.Entry<String, String> jobField : job.entrySet()){
-                System.out.println(jobField.getKey() + ": " + jobField.getValue());
+            System.out.print("No Results"); //NEEDS TO BE "print" INSTEAD OF "printLn" or there is a space after "No Results"
+        } else {
+            for (HashMap<String, String> job : someJobs) {
+                System.out.println();
+                System.out.println("*****");
+                for (Map.Entry<String, String> jobField : job.entrySet()){
+                    System.out.println(jobField.getKey() + ": " + jobField.getValue());
+                }
+                System.out.println("*****");
             }
-            System.out.println("*****");
-            System.out.println();
         }
 
         };
